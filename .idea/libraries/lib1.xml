@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jansi-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jline-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Fjalp2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
