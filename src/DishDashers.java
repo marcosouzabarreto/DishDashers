@@ -2,10 +2,11 @@
 import ujcar.controle.Carro;
 import ujcar.controle.Freio;
 import ujcar.controle.Motor;
-import ujcar.controle.Turbo;
+import ujcar.controle.Energetico;
 
 
 public class DishDashers {
+//acho que ta indo ze
 
     /**
      * @param args the command line arguments
@@ -17,7 +18,7 @@ public class DishDashers {
         
     }
     
-    public static void movimentaCarro(int pos){
+    public static void movimentaBarman(int pos){
         //Seta pra cima
         if(pos==0){
             

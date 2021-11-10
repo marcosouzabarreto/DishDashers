@@ -9,9 +9,9 @@ public class TelaInicial extends Componente implements Tela{
         new Header(CorFundo.PRETO,CorFonte.AZUL,CorFonte.BRANCO,4,8).imprimir();
         
         if(getComponentselect() == 0){
-            new Botao(CorFonte.PRETO,CorFundo.AMARELO, 5, 65, "Comecar").imprimir();
+            new Botao(CorFonte.PRETO,CorFundo.AMARELO, 5, 65, "Play").imprimir();
         }else{
-            new Botao(CorFonte.AMARELO,CorFundo.PRETO, 5, 65, "Comecar").imprimir();
+            new Botao(CorFonte.AMARELO,CorFundo.PRETO, 5, 65, "Play").imprimir();
         }
         
         if(getComponentselect() == 1){
