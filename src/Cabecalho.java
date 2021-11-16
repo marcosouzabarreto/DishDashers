@@ -8,7 +8,7 @@ public class Cabecalho extends Componente{
         Fjalp2.getTerminal().setPosicaoCursor(0, 0);
         
         for (int i=0; i<=(width-9); i++){
-            if (i==(width/2)) Fjalp2.getTerminal().escreva(" UJ CAR ");
+            if (i==(width/2)) Fjalp2.getTerminal().escreva(" Dish Dashers ");
             Fjalp2.getTerminal().escreva(" ");
         }
     }

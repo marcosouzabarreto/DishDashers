@@ -23,14 +23,14 @@ public class Veiculo {
     }
     
     //Método que acelera
-    public void acelerar(){
+    public void andar1(){
         setVelocidade(getVelocidade() + getMotor().aceleracao());
         System.out.println("Bi bi");
     }
 
     //Método que freia
-    public void frear(){
-        setVelocidade(getFreio().desaceleracao(getVelocidade()));
+    public void pda(){
+        setVelocidade(getpda().desaceleracao(getVelocidade()));
     }    
     
     //Método que para o veiculo
@@ -71,7 +71,7 @@ public class Veiculo {
         this.motor = motor;
     }
 
-    public Freio getFreio() {
+    public Freio getpda() {
         return freio;
     }
 
