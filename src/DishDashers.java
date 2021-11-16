@@ -1,10 +1,3 @@
-
-import ujcar.controle.Carro;
-import ujcar.controle.Freio;
-import ujcar.controle.Motor;
-import ujcar.controle.Energetico;
-
-
 public class DishDashers {
 //acho que ta indo ze
 
