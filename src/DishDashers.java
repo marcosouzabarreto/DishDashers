@@ -1,37 +1,16 @@
 public class DishDashers {
-//acho que ta indo ze
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        TelaInicial telainicial = new TelaInicial();
+        Fjalp2.getTerminal().limparTela();
+        Fjalp2.getTerminal().limparFundo();
+
+        TelaInicial telainicial = new TelaInicial(1);
         telainicial.imprimircabecalho();
-        telainicial.imprimir(); 
-        
+        telainicial.imprimir();
+
     }
-    
-    public static void movimentaBarman(int pos){
-        //Seta pra cima
-        if(pos==0){
-            
-        }
-        
-        //Seta pra baixo
-        if(pos==1){
-            
-        }
-        
-        //Seta pra esquerda
-        if(pos==2){
-            
-        }
-        
-        //Seta pra direita
-        if(pos==3){
-            
-        }
-    }
-     
     
 }

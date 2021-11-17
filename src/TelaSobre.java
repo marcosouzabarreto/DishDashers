@@ -25,7 +25,7 @@ public class TelaSobre extends Componente implements Tela{
         if(tecla==13){
             Fjalp2.getTerminal().limparTela();
             Fjalp2.getTerminal().limparFundo();
-            new TelaInicial().imprimir();
+            new TelaInicial(1).imprimir();
         }else{
             this.imprimir();
         }

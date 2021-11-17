@@ -4,7 +4,6 @@
       <root url="jar://$PROJECT_DIR$/lib/Fjalp2.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/jansi-1.4.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/jline-1.0.jar!/" />
-      <root url="jar://$PROJECT_DIR$/dist/UJCar.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

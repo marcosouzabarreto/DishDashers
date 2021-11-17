@@ -1,55 +1,55 @@
-import dishdashers.controle.Garcom;
-
 public class FaseUm {
     int[][] espacos;
     int largura;
     int altura;
     int pontuacao;
-    
+
     public FaseUm(int largura, int altura) {
         espacos = new int[altura][largura];
         this.largura = largura;
         this.altura = altura;
         this.pontuacao = 200;
     }
-    
+
     public void iniciar(){
-        int largura_tela = Fjalp2.getTerminal().getJlineTerminal().getTerminalWidth();
-            int altura_tela = Fjalp2.getTerminal().getJlineTerminal().getTerminalHeight();
-            FaseUm fase = new FaseUm(altura_tela, largura_tela);
-            Garcom barman = new Garcom();
+        Garcom barman = new Garcom(1);
+        Restaurante restaurante = new Restaurante(0,0);
 
-            while(true){
-                int tecla = Fjalp2.getTerminal().leiaTecla();
+        restaurante.desenhaRestaurante();
+        barman.desenharGarcom(barman.getPos());
 
-                // Baixo
-                if(tecla==14){
-                    barman.setY(barman.getY()+1);
+        while(true){
+            int tecla = Fjalp2.getTerminal().leiaTecla();
+
+            // cima
+            if(tecla==16){
+                if(barman.getPos() > 1) {
+                    barman.setPos(barman.getPos() - 1);
+                    barman.desenharGarcom(barman.getPos());
                 }
+            }
 
-                // Cima
-                if(tecla==16){
-                    barman.setY(barman.getY()-1);
-                    break;
+            // Baixo
+            if(tecla==14){
+                if(barman.getPos() < 8) {
+                    barman.setPos(barman.getPos() + 1);
+                    barman.desenharGarcom(barman.getPos());
                 }
+            }
 
-                //Checagens
-                if(barman.getY()<3){
-                    barman.setY(4);
-                }
+            // Esc
+            if (tecla==27){
+                new TelaInicial(1);
+            }
 
-                if(barman.getY()>largura_tela-3){
-                    barman.setY(largura_tela-3);
-                }
+            // Checagens
+
+            Fjalp2.getTerminal().limparTela();
+
+            restaurante.desenhaRestaurante();
+            barman.desenharGarcom(barman.getPos());
 
 
-                Fjalp2.getTerminal().limparTela();
-
-                Fjalp2.getTerminal().setPosicaoCursor(0, barman.getY());
-                Fjalp2.getTerminal().setCorFonte(CorFonte.VERDE);
-                Fjalp2.getTerminal().escreva(barman.imprimir());
-
-    //            try { Thread.sleep (150); } catch (InterruptedException ex) {}
             }
     }
     

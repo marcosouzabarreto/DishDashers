@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="UJCar">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/dist/UJCar.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
