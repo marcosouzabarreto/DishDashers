@@ -28,40 +28,13 @@ public class Garcom {
   public void desenhar(int x, int pos) {
     Fjalp2.getTerminal().setPosicaoCursor(x, 8);
     Fjalp2.getTerminal().setCor(CorFonte.BRANCO, CorFundo.PRETO);
-    Fjalp2.getTerminal().escrevaln(" xxxxxx");
+    Fjalp2.getTerminal().escrevaln(" || ||  ||||   //");
     Fjalp2.getTerminal().setPosicaoCursor(x + 1, 8);
     Fjalp2.getTerminal().setCor(CorFonte.BRANCO, CorFundo.PRETO);
-    Fjalp2.getTerminal().escrevaln("x   " + pos + "   x");
+    Fjalp2.getTerminal().escrevaln(" ||"+ pos +"|||||||||||");
     Fjalp2.getTerminal().setPosicaoCursor(x + 2, 8);
     Fjalp2.getTerminal().setCor(CorFonte.BRANCO, CorFundo.PRETO);
-    Fjalp2.getTerminal().escrevaln("x      x");
-    Fjalp2.getTerminal().setPosicaoCursor(x + 3, 8);
-    Fjalp2.getTerminal().setCor(CorFonte.BRANCO, CorFundo.PRETO);
-    Fjalp2.getTerminal().escrevaln(" xxxxxx");
-    Fjalp2.getTerminal().setPosicaoCursor(x + 4, 8);
-    Fjalp2.getTerminal().setCor(CorFonte.BRANCO, CorFundo.PRETO);
-    Fjalp2.getTerminal().escrevaln("   xx");
-    Fjalp2.getTerminal().setPosicaoCursor(x + 5, 8);
-    Fjalp2.getTerminal().setCor(CorFonte.BRANCO, CorFundo.PRETO);
-    Fjalp2.getTerminal().escrevaln("   xx");
-    Fjalp2.getTerminal().setPosicaoCursor(x + 6, 8);
-    Fjalp2.getTerminal().setCor(CorFonte.BRANCO, CorFundo.PRETO);
-    Fjalp2.getTerminal().escrevaln("  xxxx");
-    Fjalp2.getTerminal().setPosicaoCursor(x + 7, 8);
-    Fjalp2.getTerminal().setCor(CorFonte.BRANCO, CorFundo.PRETO);
-    Fjalp2.getTerminal().escrevaln("  xxxx");
-    Fjalp2.getTerminal().setPosicaoCursor(x + 8, 8);
-    Fjalp2.getTerminal().setCor(CorFonte.BRANCO, CorFundo.PRETO);
-    Fjalp2.getTerminal().escrevaln("  xxxx");
-    Fjalp2.getTerminal().setPosicaoCursor(x + 9, 8);
-    Fjalp2.getTerminal().setCor(CorFonte.BRANCO, CorFundo.PRETO);
-    Fjalp2.getTerminal().escrevaln("  xxxx");
-    Fjalp2.getTerminal().setPosicaoCursor(x + 10, 8);
-    Fjalp2.getTerminal().setCor(CorFonte.BRANCO, CorFundo.PRETO);
-    Fjalp2.getTerminal().escrevaln("   xx");
-    Fjalp2.getTerminal().setPosicaoCursor(x + 11, 8);
-    Fjalp2.getTerminal().setCor(CorFonte.BRANCO, CorFundo.PRETO);
-    Fjalp2.getTerminal().escreva("   xx");
+    Fjalp2.getTerminal().escrevaln(" || ||  |||||  \\\\");
   }
 
   public Garcom(int pos) {
