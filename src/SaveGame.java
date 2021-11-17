@@ -1,21 +1,29 @@
-import org.json.simple.JSONObject;
 import java.io.*;
+import java.util.Scanner;
 
 public class SaveGame {
 
-  @SuppressWarnings("unchecked")
-
   public void save (int fase) {
-    JSONObject object = new JSONObject();
-
-    object.put("fase", fase);
-
     try {
-      FileWriter saveFile = new FileWriter("save.json");
-      saveFile.write(object.toJSONString());
+      PrintWriter out = new PrintWriter("save.txt");
+      out.print(fase);
+      out.close();
     } catch (IOException e) {
       e.printStackTrace();
     }
   }
-
+  public int load () {
+    int fase = -1;
+    try {
+      File myObj = new File("save.txt");
+      Scanner myReader = new Scanner(myObj);
+      while (myReader.hasNextLine()) {
+        fase = myReader.nextInt();
+      }
+      myReader.close();
+    } catch (FileNotFoundException e) {
+      e.printStackTrace();
+    }
+    return fase;
+  }
 }

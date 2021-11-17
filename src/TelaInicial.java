@@ -1,3 +1,4 @@
+import java.util.Objects;
 
 public class TelaInicial extends Componente implements Tela {
   private int fase;
@@ -65,7 +66,26 @@ public class TelaInicial extends Componente implements Tela {
       }
 
       if (getComponentselect() == 2) {
-        new SaveGame().save(fase);
+        new SaveGame().save(getFase());
+        Fjalp2.getTerminal().limparTela();
+        Fjalp2.getTerminal().setPosicaoCursor(height - 3, 0);
+        Fjalp2.getTerminal().escreva("Jogo salvo com sucesso!");
+        this.imprimir();
+      }
+
+      if (getComponentselect() == 3) {
+        int loaded = new SaveGame().load();
+        if(loaded != -1) {
+          setFase(loaded);
+          Fjalp2.getTerminal().limparTela();
+          Fjalp2.getTerminal().setPosicaoCursor(height - 3, 0);
+          Fjalp2.getTerminal().escreva("Jogo carregado para a fase " + this.fase);
+        } else {
+          Fjalp2.getTerminal().limparTela();
+          Fjalp2.getTerminal().setPosicaoCursor(height - 3, 0);
+          Fjalp2.getTerminal().escreva("Erro ao carregar fase");
+        }
+        this.imprimir();
       }
 
     } else if (tecla==27){

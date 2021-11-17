@@ -42,8 +42,6 @@ public class FaseUm {
                 new TelaInicial(1);
             }
 
-            // Checagens
-
             Fjalp2.getTerminal().limparTela();
 
             restaurante.desenhaRestaurante();
