@@ -19,26 +19,19 @@ public class CaixaSobre extends Componente{
         Fjalp2.getTerminal().escreva("                     ");
         Fjalp2.getTerminal().setPosicaoCursor(this.getPosinicialx()+4, this.getPosinicialy());
         Fjalp2.getTerminal().setCor(CorFundo.PRETO, CorFonte.AMARELO);
-        Fjalp2.getTerminal().escreva("  Felipe Torres      ");
-        Fjalp2.getTerminal().setPosicaoCursor(this.getPosinicialx()+6, this.getPosinicialy());
-        Fjalp2.getTerminal().escreva("  Arthur Calasans    ");
+        Fjalp2.getTerminal().escreva("   Marco Barreto     ");
+        Fjalp2.getTerminal().setPosicaoCursor(this.getPosinicialx()+5, this.getPosinicialy());
+        Fjalp2.getTerminal().escreva("   Pedro Wilker      ");
         Fjalp2.getTerminal().setPosicaoCursor(this.getPosinicialx()+7, this.getPosinicialy());
-        Fjalp2.getTerminal().escreva("  Helder Amaral      ");
+        Fjalp2.getTerminal().escreva("   Helder Amaral     ");
         Fjalp2.getTerminal().setPosicaoCursor(this.getPosinicialx()+8, this.getPosinicialy());
-        Fjalp2.getTerminal().escreva("  Henrique Santana   ");
+        Fjalp2.getTerminal().escreva("   Arthur Calasans   ");
         Fjalp2.getTerminal().setPosicaoCursor(this.getPosinicialx()+9, this.getPosinicialy());
-        Fjalp2.getTerminal().escreva("  Lucas Kalil        ");
+        Fjalp2.getTerminal().escreva("   Maria Sao Paulo   ");
         Fjalp2.getTerminal().setPosicaoCursor(this.getPosinicialx()+10, this.getPosinicialy());
-        Fjalp2.getTerminal().escreva("  Maria Sao Paulo    ");
+        Fjalp2.getTerminal().escreva("   Victor Morais     ");
         Fjalp2.getTerminal().setPosicaoCursor(this.getPosinicialx()+11, this.getPosinicialy());
-        Fjalp2.getTerminal().escreva("  Mateus Couto       ");
-        Fjalp2.getTerminal().setPosicaoCursor(this.getPosinicialx()+12, this.getPosinicialy());
-        Fjalp2.getTerminal().escreva("  Pedro Wilker       ");
-        Fjalp2.getTerminal().setPosicaoCursor(this.getPosinicialx()+13, this.getPosinicialy());
-        Fjalp2.getTerminal().escreva("  Victor Morais      ");
-        Fjalp2.getTerminal().setPosicaoCursor(this.getPosinicialx()+15, this.getPosinicialy());
-        
-  
+
     }
     
 }
