@@ -65,8 +65,7 @@ public class TelaInicial extends Componente implements Tela {
       }
 
       if (getComponentselect() == 2) {
-        SaveGame saveGame = new SaveGame(fase);
-        saveGame.save();
+        new SaveGame().save(fase);
       }
 
     } else if (tecla==27){
