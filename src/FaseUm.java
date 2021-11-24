@@ -11,6 +11,10 @@ public class FaseUm {
         this.pontuacao = 200;
     }
 
+    void handleDeliverBeverage() {
+
+    }
+
     public void iniciar(){
         Garcom barman = new Garcom(1);
         Restaurante restaurante = new Restaurante(0,0);
@@ -22,7 +26,7 @@ public class FaseUm {
             int tecla = Fjalp2.getTerminal().leiaTecla();
 
             // cima
-            if(tecla==16){
+            if(tecla==Teclas.CIMA){
                 if(barman.getPos() > 1) {
                     barman.setPos(barman.getPos() - 1);
                     barman.desenharGarcom(barman.getPos());
@@ -30,17 +34,27 @@ public class FaseUm {
             }
 
             // Baixo
-            if(tecla==14){
+            if(tecla==Teclas.BAIXO){
                 if(barman.getPos() < 8) {
                     barman.setPos(barman.getPos() + 1);
                     barman.desenharGarcom(barman.getPos());
                 }
             }
 
-            // Esc
-            if (tecla==27){
-                new TelaInicial(1);
+            if (tecla==Teclas.ESPACO) {
+                if (barman.getPos() == 4){
+
+                }
+                barman.handleInteraction();
             }
+
+            // Esc
+            if (tecla==Teclas.ESC){
+                new TelaInicial(1);
+                break;
+            }
+
+
 
             Fjalp2.getTerminal().limparTela();
 
