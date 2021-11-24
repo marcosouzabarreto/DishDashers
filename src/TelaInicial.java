@@ -15,32 +15,32 @@ public class TelaInicial extends Componente implements Tela {
     new Header(CorFundo.PRETO, CorFonte.AZUL, CorFonte.BRANCO, 4, 8).imprimir();
 
     if (getComponentselect() == 0) {
-      new Botao(CorFonte.PRETO, CorFundo.AMARELO, 5, 65, "Play").imprimir();
+      new Botao(CorFonte.PRETO, CorFundo.CYAN, 5, 65, "Play").imprimir();
     } else {
-      new Botao(CorFonte.AMARELO, CorFundo.PRETO, 5, 65, "Play").imprimir();
+      new Botao(CorFonte.CYAN, CorFundo.PRETO, 5, 65, "Play").imprimir();
     }
 
     if (getComponentselect() == 1) {
-      new Botao(CorFonte.PRETO, CorFundo.AMARELO, 10, 65, "Sobre").imprimir();
+      new Botao(CorFonte.PRETO, CorFundo.CYAN, 10, 65, "Sobre").imprimir();
     } else {
-      new Botao(CorFonte.AMARELO, CorFundo.PRETO, 10, 65, "Sobre").imprimir();
+      new Botao(CorFonte.CYAN, CorFundo.PRETO, 10, 65, "Sobre").imprimir();
     }
 
     if (getComponentselect() == 2) {
-      new Botao(CorFonte.PRETO, CorFundo.AMARELO, 15, 65, "Salvar").imprimir();
+      new Botao(CorFonte.PRETO, CorFundo.CYAN, 15, 65, "Salvar").imprimir();
     } else {
-      new Botao(CorFonte.AMARELO, CorFundo.PRETO, 15, 65, "Salvar").imprimir();
+      new Botao(CorFonte.CYAN, CorFundo.PRETO, 15, 65, "Salvar").imprimir();
     }
 
     if (getComponentselect() == 3) {
-      new Botao(CorFonte.PRETO, CorFundo.AMARELO, 20, 65, "Carregar").imprimir();
+      new Botao(CorFonte.PRETO, CorFundo.CYAN, 20, 65, "Carregar").imprimir();
     } else {
-      new Botao(CorFonte.AMARELO, CorFundo.PRETO, 20, 65, "Carregar").imprimir();
+      new Botao(CorFonte.CYAN, CorFundo.PRETO, 20, 65, "Carregar").imprimir();
     }
 
 
     Fjalp2.getTerminal().setPosicaoCursor(height - 1, 0);
-    Fjalp2.getTerminal().setCor(CorFundo.PRETO, CorFonte.AMARELO);
+    Fjalp2.getTerminal().setCor(CorFundo.PRETO, CorFonte.CYAN);
     Fjalp2.getTerminal().escreva("Navegue entre as opcoes com as setas e selecione com enter");
 
     int tecla = Fjalp2.getTerminal().leiaTecla();

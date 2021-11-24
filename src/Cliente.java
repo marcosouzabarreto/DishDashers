@@ -16,6 +16,44 @@ public class Cliente {
         return orderSize;
     }
 
+    public void desenharCliente(int pos) {
+        switch (pos) {
+            case 1: desenhar(98);
+                break;
+            case 2: desenhar(108);
+                break;
+            case 3: desenhar(118);
+                break;
+            default:
+                break;
+        }
+
+    }
+
+    public void desenhar(int x) {
+
+        new Utils().drawBeverage(17-this.orderSize-2, x+2, this.beverage, true);
+        Fjalp2.getTerminal().setPosicaoCursor(15, x);
+        Fjalp2.getTerminal().setCor(CorFonte.BRANCO, CorFundo.PRETO);
+        Fjalp2.getTerminal().escrevaln("  ____");
+        Fjalp2.getTerminal().setPosicaoCursor(16, x);
+        Fjalp2.getTerminal().setCor(CorFonte.BRANCO, CorFundo.PRETO);
+        Fjalp2.getTerminal().escrevaln(" |    |");
+        Fjalp2.getTerminal().setPosicaoCursor(17, x);
+        Fjalp2.getTerminal().setCor(CorFonte.BRANCO, CorFundo.PRETO);
+        Fjalp2.getTerminal().escrevaln("|      |");
+        Fjalp2.getTerminal().setPosicaoCursor(18, x);
+        Fjalp2.getTerminal().setCor(CorFonte.BRANCO, CorFundo.PRETO);
+        Fjalp2.getTerminal().escrevaln("| (  ) |");
+        Fjalp2.getTerminal().setPosicaoCursor(19, x);
+        Fjalp2.getTerminal().setCor(CorFonte.BRANCO, CorFundo.PRETO);
+        Fjalp2.getTerminal().escrevaln("|      |");
+        Fjalp2.getTerminal().setPosicaoCursor(20, x);
+        Fjalp2.getTerminal().setCor(CorFonte.BRANCO, CorFundo.PRETO);
+        Fjalp2.getTerminal().escrevaln(" |____|");
+    }
+
+
     public Stack<Integer> createBeverage() {
 
         Integer[] colorOptions = { CorFonte.VERMELHO, CorFonte.VERDE,
