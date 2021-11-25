@@ -7,7 +7,7 @@ public class DishDashers {
         Fjalp2.getTerminal().limparTela();
         Fjalp2.getTerminal().limparFundo();
 
-        TelaInicial telainicial = new TelaInicial(1);
+        TelaInicial telainicial = new TelaInicial(1, 0);
         telainicial.imprimircabecalho();
         telainicial.imprimir();
 

@@ -2,8 +2,10 @@ import java.util.Objects;
 
 public class TelaInicial extends Componente implements Tela {
   private int fase;
+  private int pontuacao = 0;
 
-  public TelaInicial (int fase) {
+  public TelaInicial (int fase, int pontuacao) {
+    this.pontuacao = pontuacao;
     this.fase = fase;
   }
 
@@ -38,6 +40,9 @@ public class TelaInicial extends Componente implements Tela {
       new Botao(CorFonte.CYAN, CorFundo.PRETO, 20, 65, "Carregar").imprimir();
     }
 
+    Fjalp2.getTerminal().setPosicaoCursor(height - 3, 0);
+    Fjalp2.getTerminal().setCor(CorFundo.PRETO, CorFonte.CYAN);
+    Fjalp2.getTerminal().escreva("Voce esta na fase " + this.fase);
 
     Fjalp2.getTerminal().setPosicaoCursor(height - 1, 0);
     Fjalp2.getTerminal().setCor(CorFundo.PRETO, CorFonte.CYAN);
@@ -55,20 +60,32 @@ public class TelaInicial extends Componente implements Tela {
       Fjalp2.getTerminal().limparTela();
 
       if (getComponentselect() == 0) {
-        FaseUm fase = new FaseUm(height, width);
-        Fjalp2.getTerminal().limparTela();
-        Fjalp2.getTerminal().limparFundo();
-        fase.iniciar();
+        if(this.fase == 1) {
+          FaseUm fase = new FaseUm(height, width, pontuacao);
+          Fjalp2.getTerminal().limparTela();
+          Fjalp2.getTerminal().limparFundo();
+          fase.iniciar();
+        } else if (this.fase == 2) {
+          FaseDois fase = new FaseDois(height, width, pontuacao);
+          Fjalp2.getTerminal().limparTela();
+          Fjalp2.getTerminal().limparFundo();
+          fase.iniciar();
+        } else if (this.fase == 3) {
+          FaseTres fase = new FaseTres(height, width, pontuacao);
+          Fjalp2.getTerminal().limparTela();
+          Fjalp2.getTerminal().limparFundo();
+          fase.iniciar();
+        }
       }
 
       if (getComponentselect() == 1) {
-        new TelaSobre().imprimir();
+        new TelaSobre(this.pontuacao).imprimir();
       }
 
       if (getComponentselect() == 2) {
-        new SaveGame().save(getFase());
+        new SaveGame().save(fase);
         Fjalp2.getTerminal().limparTela();
-        Fjalp2.getTerminal().setPosicaoCursor(height - 3, 0);
+        Fjalp2.getTerminal().setPosicaoCursor(height - 4, 0);
         Fjalp2.getTerminal().escreva("Jogo salvo com sucesso!");
         this.imprimir();
       }
@@ -78,11 +95,11 @@ public class TelaInicial extends Componente implements Tela {
         if(loaded != -1) {
           setFase(loaded);
           Fjalp2.getTerminal().limparTela();
-          Fjalp2.getTerminal().setPosicaoCursor(height - 3, 0);
+          Fjalp2.getTerminal().setPosicaoCursor(height - 4, 0);
           Fjalp2.getTerminal().escreva("Jogo carregado para a fase " + this.fase);
         } else {
           Fjalp2.getTerminal().limparTela();
-          Fjalp2.getTerminal().setPosicaoCursor(height - 3, 0);
+          Fjalp2.getTerminal().setPosicaoCursor(height - 4, 0);
           Fjalp2.getTerminal().escreva("Erro ao carregar fase");
         }
         this.imprimir();
@@ -99,10 +116,6 @@ public class TelaInicial extends Componente implements Tela {
       this.imprimir();
     }
 
-  }
-
-  public int getFase() {
-    return fase;
   }
 
   public void setFase(int fase) {

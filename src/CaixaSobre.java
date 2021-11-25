@@ -11,14 +11,14 @@ public class CaixaSobre extends Componente{
     @Override
     public void imprimir() {
         Fjalp2.getTerminal().setPosicaoCursor(this.getPosinicialx(), this.getPosinicialy());
-        Fjalp2.getTerminal().setCor(CorFundo.AMARELO, CorFonte.PRETO);
+        Fjalp2.getTerminal().setCor(CorFundo.CYAN, CorFonte.PRETO);
         Fjalp2.getTerminal().escreva("                     ");
         Fjalp2.getTerminal().setPosicaoCursor(this.getPosinicialx()+1, this.getPosinicialy());
         Fjalp2.getTerminal().escreva("       AUTORES       ");
         Fjalp2.getTerminal().setPosicaoCursor(this.getPosinicialx()+2, this.getPosinicialy());
         Fjalp2.getTerminal().escreva("                     ");
         Fjalp2.getTerminal().setPosicaoCursor(this.getPosinicialx()+5, this.getPosinicialy());
-        Fjalp2.getTerminal().setCor(CorFundo.PRETO, CorFonte.AMARELO);
+        Fjalp2.getTerminal().setCor(CorFundo.PRETO, CorFonte.CYAN);
         Fjalp2.getTerminal().escreva("   Marco Barreto     ");
         Fjalp2.getTerminal().setPosicaoCursor(this.getPosinicialx()+6, this.getPosinicialy());
         Fjalp2.getTerminal().escreva("   Pedro Wilker      ");

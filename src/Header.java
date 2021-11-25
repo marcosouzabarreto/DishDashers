@@ -36,11 +36,11 @@ public class Header extends Componente{
         Fjalp2.getTerminal().setPosicaoCursor(this.getPosinicialx()+11, this.getPosinicialy());
         Fjalp2.getTerminal().escrevaln("                  |,-'''_ _  ~ ||`-.|                     ");
         Fjalp2.getTerminal().setPosicaoCursor(this.getPosinicialx()+12, this.getPosinicialy());
-        Fjalp2.getTerminal().escrevaln("                  |~ / `-.\\ ,-'\\ ~|                     ");
+        Fjalp2.getTerminal().escrevaln("                  |~ / `- .\\ ,- '\\ ~|                     ");
         Fjalp2.getTerminal().setPosicaoCursor(this.getPosinicialx()+13, this.getPosinicialy());
         Fjalp2.getTerminal().escrevaln("                  |`-...___/___,..-'|                      ");
         Fjalp2.getTerminal().setPosicaoCursor(this.getPosinicialx()+14, this.getPosinicialy());
-        Fjalp2.getTerminal().escrevaln("                  |   `-./-'_ \\/_| |                      ");
+        Fjalp2.getTerminal().escrevaln("                  |   `-./-'_  \\/_| |                      ");
         Fjalp2.getTerminal().setPosicaoCursor(this.getPosinicialx()+15, this.getPosinicialy());
         Fjalp2.getTerminal().escrevaln("                  | -'  ~~     || -.|");
         Fjalp2.getTerminal().setPosicaoCursor(this.getPosinicialx()+16, this.getPosinicialy());

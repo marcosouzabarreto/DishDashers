@@ -17,11 +17,10 @@ public class Restaurante {
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_WHITE = "\u001B[37m";
 
-    public void desenhaRestaurante(){
-        Fjalp2.getTerminal().setPosicaoCursor(this.getPosinicialx(), this.getPosinicialy());
+    public void desenhaRestaurante(int pontuacao){
         Fjalp2.getTerminal().setPosicaoCursor(this.getPosinicialx()+1, this.getPosinicialy());
         Fjalp2.getTerminal().setCor(CorFonte.BRANCO, CorFundo.PRETO);
-        Fjalp2.getTerminal().escrevaln("    00000000000000000000000000000000000000000000000000000000000000000000000                                                             ");
+        Fjalp2.getTerminal().escrevaln("    00000000000000000000000000000000000000000000000000000000000000000000000       Pontuacao atual:" + pontuacao + " | Digite ESC para voltar ao menu");
         Fjalp2.getTerminal().escrevaln("    00                                                                   00                                                             ");
         Fjalp2.getTerminal().escrevaln("    00                                       000000000000000000000000000000                                                             ");
         Fjalp2.getTerminal().escrevaln("    00                                       00                          00                                                             ");

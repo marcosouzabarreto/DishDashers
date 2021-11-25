@@ -1,13 +1,13 @@
 import java.util.LinkedList;
 import java.util.Stack;
 
-public class FaseUm {
+public class FaseDois {
     int[][] espacos;
     int largura;
     int altura;
     int pontuacao;
 
-    public FaseUm(int largura, int altura, int pontuacao) {
+    public FaseDois(int largura, int altura, int pontuacao) {
         espacos = new int[altura][largura];
         this.largura = largura;
         this.altura = altura;
@@ -20,13 +20,15 @@ public class FaseUm {
 
     public void iniciar(){
         Garcom barman = new Garcom(1);
-        Cliente cliente1 = new Cliente(3);
-        Cliente cliente2 = new Cliente(4);
+        Cliente cliente1 = new Cliente(5);
+        Cliente cliente2 = new Cliente(3);
+        Cliente cliente3 = new Cliente(4);
 
         LinkedList<Cliente> activeClients = new LinkedList<>();
 
         activeClients.add(cliente1);
         activeClients.add(cliente2);
+        activeClients.add(cliente3);
 
         Restaurante restaurante = new Restaurante(0,0);
 
@@ -59,13 +61,13 @@ public class FaseUm {
 
             if (tecla==Teclas.ESC){
                 Fjalp2.getTerminal().limparTela();
-                new TelaInicial(1, this.pontuacao).imprimir();
+                new TelaInicial(2, this.pontuacao).imprimir();
                 break;
             }
 
             if (activeClients.isEmpty()) {
                 Fjalp2.getTerminal().limparTela();
-                new TelaInicial(2, this.pontuacao).imprimir();
+                new TelaInicial(3, this.pontuacao).imprimir();
                 break;
             }
 
@@ -82,5 +84,4 @@ public class FaseUm {
 
         }
     }
-    
 }

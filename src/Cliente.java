@@ -12,7 +12,6 @@ public class Cliente {
     }
 
     public int getOrderSize() {
-
         return orderSize;
     }
 
@@ -23,6 +22,8 @@ public class Cliente {
             case 2: desenhar(108);
                 break;
             case 3: desenhar(118);
+                break;
+            case 4: desenhar(128);
                 break;
             default:
                 break;
