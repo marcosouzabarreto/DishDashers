@@ -12,7 +12,7 @@ public class FaseUm {
         espacos = new int[altura][largura];
         this.largura = largura;
         this.altura = altura;
-        this.pontuacao = 200;
+        this.pontuacao = 0;
     }
 
     private boolean handleDeliverBeverage(Stack<Integer> userBeverage, Stack<Integer> clientBeverage) {
@@ -83,8 +83,6 @@ public class FaseUm {
             }
 
             barman.desenharGarcom(barman.getPos());
-
-
         }
     }
     
